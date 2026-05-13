@@ -1,0 +1,502 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ========== FONTS ========== */
+  --font-display: var(--font-funnel-display);
+  --font-body: var(--font-matter);
+  --font-mono: var(--font-martian-mono);
+
+  /* ========== TYPOGRAPHY SCALE ========== */
+  --text-h0: 64px;
+  --text-h0--line-height: 1.2;
+  --text-h0--font-weight: 400;
+
+  --text-h1: 45px;
+  --text-h1--line-height: 1.2;
+  --text-h1--font-weight: 300;
+
+  --text-h2: 32px;
+  --text-h2--line-height: 1.25;
+  --text-h2--font-weight: 400;
+
+  --text-h3: 18px;
+  --text-h3--line-height: 1.2;
+  --text-h3--font-weight: 500;
+
+  --text-b1: 23px;
+  --text-b1--line-height: 1.5;
+  --text-b1--font-weight: 400;
+
+  --text-b2: 16px;
+  --text-b2--line-height: 1.5;
+  --text-b2--font-weight: 400;
+
+  --text-b3: 11px;
+  --text-b3--line-height: 1.4;
+  --text-b3--font-weight: 400;
+
+  --text-o1: 11px;
+  --text-o1--line-height: 1.2;
+  --text-o1--font-weight: 500;
+
+  /* Navbar GET STARTED — Martian Mono 16 / 140% / 400 */
+  --text-nav-get-started: 16px;
+  --text-nav-get-started--line-height: 1.4;
+  --text-nav-get-started--font-weight: 400;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 1.3;
+  --text-caption--font-weight: 400;
+
+  /* ========== COLORS ========== */
+  --color-primary: #6366f1;
+  --color-primary-hover: #5458ee;
+  --color-on-primary: #ffffff;
+  /* Navbar GET STARTED (matches service gradient mid-tone) */
+  --color-nav-get-started-bg: #495aee;
+
+  --color-bg: #ffffff;
+  --color-fg: #171717;
+
+  --color-muted: #6b7280;
+  --color-border: #8e8e93;
+
+  /* Warm surfaces (home sections, cards, badges) */
+  --color-surface-cream: #fffaeb;
+  --color-surface-cream-alt: #fffbeb;
+  --color-surface-blush: #fdf7ed;
+  --color-surface-warm-muted: #efe6d6;
+
+  /* Neutrals & chrome */
+  --color-border-dashed: #a8a8a8;
+  --color-neutral-icon: #d9d9d9;
+  --color-neutral-icon-hover: #d1d5db;
+  --color-text-secondary: #444444;
+  /* Long-form body on light sections (e.g. services hero) */
+  --color-text-body: #555555;
+  --color-link-muted: #8e8e93;
+
+  /* Sector grid hover */
+  --color-surface-sector-hover: #ebe6d9;
+
+  /* About — stat cards (light neutral panel) */
+  --color-surface-about-stat-card: #f4f4f5;
+
+  /* About — operational workflow (large muted step titles) */
+  --color-about-workflow-step-title: #d1d5db;
+
+  /* Careers page (`/careers`) */
+  --color-careers-hero-bg: #eef1f8;
+  --color-careers-panel-bg: #eceef8;
+  /* Job row meta line (`Decom • xxx • xxx`) — medium neutral gray on panel */
+  --color-careers-opening-meta: #8e8e93;
+
+  /* About — leadership accordion expanded row */
+  --color-leadership-expanded-bg: #05051a;
+  --color-leadership-expanded-fg: #ffffff;
+  --color-leadership-expanded-divider: rgb(255 255 255 / 0.14);
+
+  /* Brand logo tile backgrounds (home) */
+  --color-brand-tile-1: #1f1f1f;
+  --color-brand-tile-2: #1da1c2;
+  --color-brand-tile-3: #ededed;
+  --color-brand-tile-4: #232f3d;
+  --color-brand-tile-5: #2b8dbf;
+
+  /* Section badge — gradient dot */
+  --gradient-badge-icon: linear-gradient(
+    180deg,
+    #0a0227 0%,
+    #1f0280 33.17%,
+    #495aee 59.62%,
+    #92a9ec 81.25%,
+    #dce1f4 100%
+  );
+
+  /* Footer / dark contact (see .cursor/patterns.mdx) */
+  --color-footer-bg: #0a0227;
+  --color-footer-accent: #4d63ff;
+  --color-footer-divider: rgba(255, 255, 255, 0.1);
+  --color-footer-muted: #9ca3af;
+  --color-footer-input-border: rgba(255, 255, 255, 0.22);
+  --color-footer-wave: rgba(156, 163, 175, 0.25);
+
+  /* Service 03 — Responsible Recycling section background */
+  --gradient-service-03-responsible-recycling: linear-gradient(
+    180deg,
+    #0a0227 0%,
+    #1f0280 38.94%,
+    #495aee 67.31%,
+    #92a9ec 100%
+  );
+
+  /* Service 03 — recycling timeline on gradient (`services-responsible-recycling`) */
+  --color-service-03-timeline-node-idle: #4a5a9a;
+  --color-service-03-timeline-line-track: rgb(255 255 255 / 0.2);
+  --color-service-03-timeline-dash: rgb(255 255 255 / 0.5);
+  --color-service-03-node-border-idle: rgb(255 255 255 / 0.45);
+  --color-service-03-node-border-active: rgb(255 255 255 / 0.95);
+  --shadow-service-03-timeline-node-active: 0 0 0 3px rgb(255 255 255 / 0.28);
+
+  /* ========== RADIUS ========== */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 24px;
+
+  /* About — mission / vision / approach carousel cards */
+  --color-about-carousel-card-mission: #4f46e5;
+  --color-about-carousel-card-vision: #3b52f1;
+  --color-about-carousel-card-approach: #2563eb;
+
+  /* About — join team CTA strip */
+  --gradient-about-join-team-cta: linear-gradient(
+    180deg,
+    #0a0227 0%,
+    #1f0280 38.94%,
+    #495aee 67.31%,
+    #92a9ec 100%
+  );
+  --color-about-joincta-surface: #fffaeb;
+  --color-about-joincta-label-fg: #0a0227;
+
+  /* About — join team CTA (`join.svg` artboard 1440×308) */
+  --size-about-join-cta-h: 308px;
+
+  /* ========== SPACING TOKENS (optional but useful) ========== */
+  --space-btn-x: 32px;
+  --space-btn-y: 16px;
+  --space-container-padding: 20px;
+  --space-container-max-width: 1440px;
+  --space-media-max-width: 1920px;
+  --space-navbar-height: 104px;
+  --space-hero-height: 646px;
+  --space-section-padding: 80px;
+  --space-gap-sm: 16px;
+  --space-gap-md: 24px;
+  --space-gap-lg: 32px;
+
+  /* About — stat cards (fixed layout from design) */
+  --size-about-stat-card-w: 452px;
+  --size-about-stat-card-h: 440px;
+}
+
+@layer components {
+  /* Mobile floating navbar pill */
+  .mobile-nav-pill {
+    position: relative;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+
+  .mobile-nav-pill::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      88.71deg,
+      rgba(255, 250, 235, 0.4) 86.8%,
+      rgba(0, 0, 0, 0.1) 119.98%
+    );
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  @media (width >= 768px) {
+    .mobile-nav-pill {
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .mobile-nav-pill::before {
+      display: none;
+    }
+  }
+
+  /* Gradient fill for section badge icon (see `section-badge.tsx`) */
+  .bg-badge-icon-gradient {
+    background-image: var(--gradient-badge-icon);
+  }
+
+  /* Max-width + horizontal padding — default page column */
+  .layout-container {
+    width: 100%;
+    min-width: 0;
+    max-width: var(--space-container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--space-container-padding);
+  }
+
+  /* Navbar-only container keeps previous horizontal rhythm. */
+  .layout-container-navbar {
+    width: 100%;
+    min-width: 0;
+    max-width: var(--space-container-max-width);
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  /* Wider media lane for large screens while preserving page padding rhythm. */
+  .layout-media-container {
+    width: 100%;
+    min-width: 0;
+    max-width: var(--space-media-max-width);
+    margin-inline: auto;
+    padding-inline: var(--space-container-padding);
+  }
+
+  /* Footer-only media lane keeps its original rhythm. */
+  .layout-media-container-footer {
+    width: 100%;
+    min-width: 0;
+    max-width: var(--space-media-max-width);
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .layout-container {
+      padding-inline: var(--space-container-padding);
+    }
+
+    .layout-media-container {
+      padding-inline: var(--space-container-padding);
+    }
+
+    .layout-container-navbar {
+      padding-inline: 20px;
+    }
+
+    .layout-media-container-footer {
+      padding-inline: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .layout-container {
+      padding-inline: 60px;
+    }
+
+    .layout-media-container {
+      padding-inline: 60px;
+    }
+  }
+
+  /* Max-width only (full-bleed media inside, add your own inner padding) */
+  .layout-container-edge {
+    width: 100%;
+    min-width: 0;
+    max-width: var(--space-container-max-width);
+    margin-inline: auto;
+  }
+
+  /* True full-bleed lane that touches viewport edges. */
+  .layout-full-bleed {
+    width: 100vw;
+    max-width: none;
+    margin-inline: calc(50% - 50vw);
+  }
+
+  .bg-about-join-team-cta {
+    background-image: var(--gradient-about-join-team-cta);
+  }
+
+  .bg-service-03-responsible-recycling {
+    background-image: var(--gradient-service-03-responsible-recycling);
+  }
+
+  /**
+   * Horizontal padding matches `public/about/leadership/join.svg`:
+   * left inset 102px, right inset 197px at 1440px (scaled with viewport).
+   */
+  .layout-about-join-cta-inner {
+    width: 100%;
+    max-width: var(--space-container-max-width);
+    margin-inline: auto;
+    min-height: var(--size-about-join-cta-h);
+    padding-inline-start: clamp(20px, 7.083vw, 102px);
+    padding-inline-end: clamp(20px, 13.681vw, 197px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  @media (width < 1024px) {
+    .layout-about-join-cta-inner {
+      min-height: 0;
+      padding-block: 2.5rem;
+    }
+  }
+
+  @media (width >= 1024px) {
+    .layout-about-join-cta-inner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+}
+
+@layer utilities {
+  @media (max-width: 767px) {
+    .text-h0 {
+      font-size: 40px !important;
+      line-height: 1.2 !important;
+    }
+
+    .text-h1 {
+      font-size: 33px !important;
+      line-height: 1.2 !important;
+      font-weight: 400 !important;
+    }
+
+    .text-b1 {
+      font-size: 16px !important;
+    }
+
+    .text-h2 {
+      font-size: 28px !important;
+      font-weight: 400 !important;
+    }
+
+    .text-b3 {
+      font-size: 16px !important;
+      font-weight: 400 !important;
+    }
+
+    .text-o1 {
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      line-height: 1.2 !important;
+    }
+  }
+}
+
+:root {
+  color: var(--color-fg);
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  /* Carousel cards — duplicated here so inline `var(--color-about-carousel-*)` always resolves */
+  --color-about-carousel-card-mission: #4f46e5;
+  --color-about-carousel-card-vision: #3b52f1;
+  --color-about-carousel-card-approach: #2563eb;
+  --gradient-about-join-team-cta: linear-gradient(
+    180deg,
+    #0a0227 0%,
+    #1f0280 38.94%,
+    #495aee 67.31%,
+    #92a9ec 100%
+  );
+  --gradient-service-03-responsible-recycling: linear-gradient(
+    180deg,
+    #0a0227 0%,
+    #1f0280 38.94%,
+    #495aee 67.31%,
+    #92a9ec 100%
+  );
+  --color-about-joincta-surface: #fffaeb;
+  --color-about-joincta-label-fg: #0a0227;
+  --color-nav-get-started-bg: #495aee;
+  --size-about-join-cta-h: 308px;
+  --color-about-workflow-step-title: #d1d5db;
+  --color-careers-hero-bg: #eef1f8;
+  --color-careers-panel-bg: #dce1f4;
+  --color-leadership-expanded-bg: #05051a;
+  --color-leadership-expanded-fg: #ffffff;
+  --color-leadership-expanded-divider: rgb(255 255 255 / 0.14);
+}
+
+img {
+  border-radius: var(--radius-md);
+}
+
+img.footer-social-icon {
+  border-radius: 5px !important;
+}
+
+/*
+  Footer consent checkbox: unlayered so Tailwind preflight / @layer rules
+  don’t override appearance, border, or :checked styles.
+*/
+.footer-consent-checkbox[type="checkbox"] {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+  cursor: pointer;
+  vertical-align: top;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.footer-consent-checkbox[type="checkbox"]:checked {
+  border-color: var(--color-footer-accent);
+  background-color: var(--color-footer-accent);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: 0.875rem 0.875rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-consent-checkbox[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-footer-accent);
+  outline-offset: 2px;
+}
+
+/* Contact page consent checkbox — same structure as footer; black border + fill */
+.contact-consent-checkbox[type="checkbox"] {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-fg);
+  background-color: transparent;
+  cursor: pointer;
+  vertical-align: top;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.contact-consent-checkbox[type="checkbox"]:checked {
+  border-color: var(--color-fg);
+  background-color: var(--color-fg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  background-size: 0.875rem 0.875rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-consent-checkbox[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 2px;
+}

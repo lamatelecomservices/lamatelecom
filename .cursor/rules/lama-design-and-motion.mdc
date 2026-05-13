@@ -1,0 +1,18 @@
+---
+description: Lama repo — design tokens, typography, layout, motion (always follow)
+alwaysApply: true
+---
+
+# Lama implementation conventions
+
+**Tokens:** `src/styles/globals.css` (`@theme inline`) is the source of truth. Use Tailwind CSS-variable syntax: `text-(--color-fg)`, `bg-(--color-bg)`, `border-(--color-border)`, surfaces (`--color-surface-*`), footer tokens, spacing `py-(--space-section-padding)`, `gap-(--space-gap-sm|md|lg)`. Add new colors/spacing in `@theme inline` instead of scattered hex in JSX.
+
+**Radius:** Use **`rounded-sm`**, **`rounded-md`**, **`rounded-lg`** (they follow `--radius-sm|md|lg` in `@theme`). Avoid arbitrary radius utilities that embed `var(--radius-…)` or invalid `rounded-(--radius-…)`.
+
+**Typography (strict):** On headings and body copy, use **only** **`font-display`**, **`font-body`**, or **`font-mono`** plus the step from `@theme inline`: **`text-h0`–`text-h3`**, **`text-b1`–`text-b3`**, **`text-o1`**, **`text-caption`**. **Do not** stack extra type utilities on those elements: no **`leading-*`**, no **`text-(--color-*)`** / arbitrary text colors (let **`color`** inherit from section or `:root` in `globals.css`), no redundant **`font-weight`**, **`tracking-*`**, or arbitrary **`text-[length]`**. Reserve **`text-(--color-*)`** for non-typography UI (icons, badges, borders) or rare exceptions agreed in review. Match `section-badge.tsx`, `button.tsx`, and section heroes.
+
+**Layout:** Use `layout-container` or `layout-container-edge`; reuse `SectionBadge`, `Button`, and existing section components when possible.
+
+**Motion:** Use `siteEase`, `siteDuration`, `defaultViewport`, and (for accordions) `siteSpringContent` from `src/lib/motion-presets.ts` with `motion/react`; prefer `ScrollReveal` / stagger helpers under `src/components/motion/` over one-off viewport config. Reuse preset durations/easing instead of scattered magic numbers for a consistent, premium feel.
+
+**Setup / init:** Full install, Biome, and build steps live in `.cursor/skills/init/SKILL.md`.
