@@ -37,7 +37,8 @@ export default function ServicesDecomissiong() {
             <SectionBadge
               label="SERVICE 01"
               backgroundColor="var(--color-surface-cream)"
-              className="w-fit" />
+              className="w-fit"
+            />
 
             <span className="font-display text-h1  leading-tight">
               Strategic Decommissioning Approach

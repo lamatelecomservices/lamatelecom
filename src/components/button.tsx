@@ -59,11 +59,7 @@ export default function Button({
           className={`${arrowCell} ${borderRadius} ${segment} transition-all duration-400 transform group-hover:translate-x-1`}
           aria-hidden
         >
-          <Image
-            src="/arrow.svg"
-            alt="arrow"
-            width={20}
-            height={20} />
+          <Image src="/arrow.svg" alt="arrow" width={20} height={20} />
         </span>
       </>
     );

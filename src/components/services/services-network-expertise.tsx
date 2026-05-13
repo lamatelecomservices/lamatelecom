@@ -22,16 +22,9 @@ const introBody = "max-w-[520px] text-b1 leading-relaxed text-(--color-muted)";
 type ExpertiseRowProps = {
   item: NetworkExpertiseItem;
   reduceMotion: boolean | null;
-  isFirst: boolean;
-  isLast: boolean;
 };
 
-function ExpertiseRow({
-  item,
-  reduceMotion,
-  isFirst,
-  isLast,
-}: ExpertiseRowProps) {
+function ExpertiseRow({ item, reduceMotion }: ExpertiseRowProps) {
   const rowArticle = [" py-12 md:py-16"].filter(Boolean).join(" ");
 
   return (
@@ -132,14 +125,9 @@ export default function ServicesNetworkExpertise() {
           stagger={0.1}
           className="border-t border-(--color-border)"
         >
-          {networkExpertiseItems.map((item, index) => (
+          {networkExpertiseItems.map((item) => (
             <StaggerItem key={item.id}>
-              <ExpertiseRow
-                item={item}
-                reduceMotion={reduce}
-                isFirst={index === 0}
-                isLast={index === networkExpertiseItems.length - 1}
-              />
+              <ExpertiseRow item={item} reduceMotion={reduce} />
             </StaggerItem>
           ))}
         </StaggerContainer>

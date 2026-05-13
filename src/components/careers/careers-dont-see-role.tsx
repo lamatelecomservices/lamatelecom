@@ -20,7 +20,8 @@ export default function CareersDontSeeRole() {
         <CareersSplitButtonCream
           href={`/about/apply`}
           label="WRITE TO US"
-          aria-label="Get in touch about careers" />
+          aria-label="Get in touch about careers"
+        />
       </div>
     </section>
   );

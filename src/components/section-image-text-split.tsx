@@ -90,7 +90,7 @@ export default function SectionImageTextSplit({
   const contentRowReverse = imagePosition === "right";
   const anchorScroll = sectionId ? "scroll-mt-28" : "";
   const isSvg = imageSrc.endsWith(".svg");
-  const radiusClass = "rounded-md";
+  const radiusClass = imageRounded ? "rounded-md" : "rounded-none";
   const sectionToneClass =
     tone === "muted" ? "bg-[#DCE1F4]" : "bg-(--color-bg)";
   const topRow = (

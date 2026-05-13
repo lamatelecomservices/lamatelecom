@@ -47,7 +47,8 @@ export function VideoBackground({ videoSrc, imageSrc }: VideoBackgroundProps) {
         }`}
         aria-hidden
         priority
-        sizes="100vw" />
+        sizes="100vw"
+      />
       <video
         ref={videoRef}
         className={`pointer-events-none absolute inset-0 size-full object-cover transition-opacity duration-700 ease-out ${
@@ -61,7 +62,8 @@ export function VideoBackground({ videoSrc, imageSrc }: VideoBackgroundProps) {
         autoPlay
         onCanPlay={tryPlay}
         onLoadedData={tryPlay}
-        aria-hidden />
+        aria-hidden
+      />
     </>
   );
 }

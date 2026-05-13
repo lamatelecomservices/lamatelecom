@@ -15,7 +15,8 @@ export default function CareersLeadership() {
         <ScrollReveal className="flex flex-col gap-6">
           <SectionBadge
             label="WORK WITH US"
-            backgroundColor="var(--color-surface-cream)" />
+            backgroundColor="var(--color-surface-cream)"
+          />
           <h2 className="font-display text-h1 font-light xl:text-h0">
             Meet the Leadership
           </h2>
@@ -28,7 +29,8 @@ export default function CareersLeadership() {
             <CareersSplitButtonDark
               href="/about"
               label="ABOUT US"
-              aria-label="About us" />
+              aria-label="About us"
+            />
           </div>
         </ScrollReveal>
         <ScrollReveal className="relative mx-auto w-full max-w-[min(100%,640px)] overflow-hidden rounded-md md:mx-0 md:max-w-none">
@@ -38,7 +40,8 @@ export default function CareersLeadership() {
               alt="Lama Telecom leadership"
               fill
               className="object-cover object-center grayscale"
-              sizes="(max-width: 767px) 100vw, 50vw" />
+              sizes="(max-width: 767px) 100vw, 50vw"
+            />
           </div>
         </ScrollReveal>
       </div>

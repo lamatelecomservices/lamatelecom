@@ -36,7 +36,8 @@ function PlaceholderLineInput({
         className={`${inputShell} ${placeholderTypography}`}
         autoComplete={
           type === "email" ? "email" : type === "tel" ? "tel" : undefined
-        } />
+        }
+      />
     );
   }
 
@@ -64,7 +65,8 @@ function PlaceholderLineInput({
         aria-label={`${placeholderText} (required)`}
         autoComplete={
           type === "email" ? "email" : type === "tel" ? "tel" : undefined
-        } />
+        }
+      />
     </div>
   );
 }
@@ -84,7 +86,8 @@ function PlaceholderLineTextarea({
       name={id}
       rows={rows}
       placeholder={placeholderText}
-      className={`min-h-36 w-full resize-y border-0 border-b border-(--color-border) bg-transparent py-3 ${inputTypography} outline-none transition-colors ${placeholderTypography}`} />
+      className={`min-h-36 w-full resize-y border-0 border-b border-(--color-border) bg-transparent py-3 ${inputTypography} outline-none transition-colors ${placeholderTypography}`}
+    />
   );
 }
 
@@ -108,7 +111,8 @@ function ResumeUploadRow() {
         className="sr-only"
         onChange={(e) => setFileName(e.target.files?.[0]?.name ?? "")}
         onFocus={() => setFileFocused(true)}
-        onBlur={() => setFileFocused(false)} />
+        onBlur={() => setFileFocused(false)}
+      />
       <div className="flex w-full min-w-0 items-end gap-3 border-b border-(--color-border) pb-3">
         <button
           type="button"
@@ -134,7 +138,8 @@ function ResumeUploadRow() {
             <ArrowUp
               className="size-5 shrink-0 text-white"
               strokeWidth={2.25}
-              aria-hidden />
+              aria-hidden
+            />
           </span>
         </label>
       </div>
@@ -176,19 +181,22 @@ export default function GeneralApplicationForm({
           id="applyEmail"
           placeholderText="Email"
           type="email"
-          required />
+          required
+        />
         <PlaceholderLineInput
           id="applyPhone"
           placeholderText="Phone Number"
           type="tel"
-          required />
+          required
+        />
 
         <ResumeUploadRow />
 
         <PlaceholderLineTextarea
           id="applyAbout"
           placeholderText="Tell us more about yourself"
-          rows={5} />
+          rows={5}
+        />
 
         <div className="pt-2">
           <Button variant="secondary" isArrow type="submit">

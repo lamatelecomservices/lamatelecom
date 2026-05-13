@@ -23,11 +23,7 @@ export default function CareersSplitButtonDark({
         {label}
       </span>
       <span className="flex h-[48px] w-[48px] min-h-[48px] min-w-[48px] shrink-0 items-center justify-center rounded-sm bg-black transition-all duration-400 group-hover:translate-x-1 group-hover:bg-(--color-primary) md:h-[54px] md:w-[54px] md:min-h-[54px] md:min-w-[54px]">
-        <Image
-          src="/arrow.svg"
-          alt=""
-          width={20}
-          height={20} />
+        <Image src="/arrow.svg" alt="" width={20} height={20} />
       </span>
     </Link>
   );

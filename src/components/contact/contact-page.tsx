@@ -41,7 +41,8 @@ export default function ContactPage() {
                     src="/contact/mail.svg"
                     alt="Email"
                     width={28}
-                    height={28} />
+                    height={28}
+                  />
                   <span className="font-body text-b1 ">{EMAIL}</span>
                 </a>
               </li>
@@ -54,7 +55,8 @@ export default function ContactPage() {
                     src="/contact/phone.svg"
                     alt="Phone"
                     width={25}
-                    height={25} />
+                    height={25}
+                  />
                   <span className="font-body text-b1">{PHONE_DISPLAY}</span>
                 </a>
               </li>
@@ -74,7 +76,8 @@ export default function ContactPage() {
                       alt=""
                       width={20}
                       height={28}
-                      className="absolute top-[2px] left-[6px] opacity-100" />
+                      className="absolute top-[2px] left-[6px] opacity-100"
+                    />
                   </span>
                   <span className="font-body text-b1">
                     {ADDRESS_LINE_1}
@@ -89,11 +92,13 @@ export default function ContactPage() {
               <Box
                 href="https://www.linkedin.com"
                 alt="LinkedIn"
-                src="/contact/linkedin.svg" />
+                src="/contact/linkedin.svg"
+              />
               <Box
                 href="https://www.facebook.com"
                 alt="Facebook"
-                src="/contact/facebook.svg" />
+                src="/contact/facebook.svg"
+              />
               <Box href="https://x.com" alt="X" src="/contact/x.svg" />
             </div>
           </div>
@@ -122,7 +127,8 @@ function Box({ href, alt, src }: { href: string; alt: string; src: string }) {
         alt={alt}
         width={60}
         height={60}
-        className="size-12 lg:size-[60px]" />
+        className="size-12 lg:size-[60px]"
+      />
     </Link>
   );
 }

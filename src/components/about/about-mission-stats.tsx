@@ -35,7 +35,8 @@ export default function AboutMissionStats() {
               fill
               className="object-cover object-center grayscale contrast-105"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              unoptimized />
+              unoptimized
+            />
           </div>
           <div className="flex w-full flex-col gap-6 lg:w-1/2">
             <p className="font-body text-b1 lg:text-h2">
@@ -71,7 +72,8 @@ export default function AboutMissionStats() {
                   fill
                   className="object-contain object-bottom-right grayscale contrast-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  unoptimized />
+                  unoptimized
+                />
               </div>
             </li>
           ))}

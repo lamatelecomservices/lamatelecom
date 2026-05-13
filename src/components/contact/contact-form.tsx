@@ -26,7 +26,8 @@ function UnderlineField({
         rows={rows}
         placeholder={placeholder}
         aria-label={placeholder}
-        className={`${inputClass} h-10 resize-y`} />
+        className={`${inputClass} h-10 resize-y`}
+      />
     );
   }
 
@@ -41,7 +42,8 @@ function UnderlineField({
       className={inputClass}
       autoComplete={
         type === "email" ? "email" : type === "tel" ? "tel" : undefined
-      } />
+      }
+    />
   );
 }
 
@@ -58,25 +60,29 @@ export default function ContactForm() {
         <UnderlineField
           id="companyName"
           placeholder="Company’s Name*"
-          required />
+          required
+        />
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6">
           <UnderlineField
             id="workEmail"
             placeholder="Work Email Address*"
             type="email"
-            required />
+            required
+          />
           <UnderlineField
             id="workPhone"
             placeholder="Work Phone*"
             type="tel"
-            required />
+            required
+          />
         </div>
 
         <UnderlineField
           id="message"
           placeholder="Tell us more about your needs (Optional)"
-          rows={4} />
+          rows={4}
+        />
 
         <label
           htmlFor="contact-consent"
@@ -87,7 +93,8 @@ export default function ContactForm() {
             name="consent"
             type="checkbox"
             required
-            className="contact-consent-checkbox" />
+            className="contact-consent-checkbox"
+          />
           <span className="font-body text-b2 leading-relaxed text-(--color-text-body)">
             I agree that Lama Telecom may contact me at the email address or
             phone number above.

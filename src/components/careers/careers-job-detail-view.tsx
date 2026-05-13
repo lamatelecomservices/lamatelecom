@@ -43,11 +43,7 @@ function ApplyNowSplitButton({
         APPLY NOW
       </span>
       <span className="flex h-[48px] w-[48px] min-h-[48px] min-w-[48px] shrink-0 items-center justify-center rounded-sm bg-black transition-all duration-400 group-hover:translate-x-1 group-hover:bg-(--color-primary) md:h-[54px] md:w-[54px] md:min-h-[54px] md:min-w-[54px]">
-        <Image
-          src="/arrow.svg"
-          alt=""
-          width={20}
-          height={20} />
+        <Image src="/arrow.svg" alt="" width={20} height={20} />
       </span>
     </button>
   );
@@ -96,7 +92,8 @@ export default function CareersJobDetailView({
             <CareersSplitButtonDark
               href={applyHref}
               label="APPLY NOW"
-              ariaLabel={`Apply for ${job.title}`} />
+              ariaLabel={`Apply for ${job.title}`}
+            />
           </div>
         </div>
       </main>
@@ -159,13 +156,15 @@ export default function CareersJobDetailView({
       <div className="hidden pt-2 lg:block">
         <ApplyNowSplitButton
           onClick={goToApplication}
-          ariaLabel={`Open application for ${job.title}`} />
+          ariaLabel={`Open application for ${job.title}`}
+        />
       </div>
 
       <div className="pt-2 lg:hidden">
         <ApplyNowSplitButton
           onClick={goToApplication}
-          ariaLabel={`Scroll to application for ${job.title}`} />
+          ariaLabel={`Scroll to application for ${job.title}`}
+        />
       </div>
     </>
   );
@@ -225,7 +224,8 @@ export default function CareersJobDetailView({
           <div className="flex flex-col gap-10">{overviewBody}</div>
           <CareersJobApplicationForm
             id="job-application"
-            jobTitle={job.title} />
+            jobTitle={job.title}
+          />
         </div>
 
         {/* Desktop: sidebar + tabs */}
@@ -288,7 +288,8 @@ export default function CareersJobDetailView({
             >
               <CareersJobApplicationForm
                 id="job-application-desktop"
-                jobTitle={job.title} />
+                jobTitle={job.title}
+              />
             </div>
           </div>
         </div>

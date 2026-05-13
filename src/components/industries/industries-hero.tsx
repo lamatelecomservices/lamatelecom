@@ -45,7 +45,8 @@ export default function IndustriesHero() {
               fill
               className="object-contain object-center"
               sizes="100vw"
-              priority />
+              priority
+            />
           </motion.div>
         </motion.div>
 
@@ -53,7 +54,8 @@ export default function IndustriesHero() {
           <SectionBadge
             label="INDUSTRIES WE SERVE"
             backgroundColor="var(--color-surface-cream)"
-            className="w-fit" />
+            className="w-fit"
+          />
           <h1 className="font-display text-h1 leading-[1.05] tracking-tight">
             <span className="block text-(--color-fg)">
               Tailored Solutions for
@@ -75,7 +77,8 @@ export default function IndustriesHero() {
           <SectionBadge
             label="INDUSTRIES WE SERVE"
             backgroundColor="var(--color-surface-cream)"
-            className="w-fit" />
+            className="w-fit"
+          />
           <h1 className="font-display text-h0 leading-[1.05] tracking-tight">
             <span className="block text-(--color-fg)">
               Tailored Solutions for
@@ -114,7 +117,8 @@ export default function IndustriesHero() {
                 fill
                 className="object-contain object-center"
                 sizes="50vw"
-                priority />
+                priority
+              />
             </motion.div>
           </div>
         </motion.div>

@@ -14,14 +14,16 @@ export default function AboutSection() {
             fill
             className="object-contain object-left"
             sizes="50vw"
-            unoptimized />
+            unoptimized
+          />
         </div>
 
         <div className="relative z-10 flex w-full flex-col gap-(--space-gap-lg) lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <ScrollReveal className="shrink-0 self-start">
             <SectionBadge
               label="WHO WE ARE"
-              backgroundColor="var(--color-surface-cream)" />
+              backgroundColor="var(--color-surface-cream)"
+            />
           </ScrollReveal>
 
           <ScrollReveal className="flex min-w-0 flex-col" delay={0.06}>

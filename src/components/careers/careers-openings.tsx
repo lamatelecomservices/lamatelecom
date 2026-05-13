@@ -20,7 +20,8 @@ export default function CareersOpenings() {
             <div className="flex min-w-0 flex-col gap-(--space-gap-md)">
               <SectionBadge
                 label="WORK WITH US"
-                backgroundColor="var(--color-surface-cream)" />
+                backgroundColor="var(--color-surface-cream)"
+              />
               <h2 className="font-display text-h1 xl:text-h0">
                 Current Openings
               </h2>
@@ -62,7 +63,8 @@ export default function CareersOpenings() {
                 <CareersSplitButtonDark
                   href={`/careers/${job.id}`}
                   label="APPLY NOW"
-                  ariaLabel={`View ${job.title} role details`} />
+                  ariaLabel={`View ${job.title} role details`}
+                />
               </div>
             </li>
           ))}

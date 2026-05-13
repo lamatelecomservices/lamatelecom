@@ -50,7 +50,8 @@ export default function StrategicSectors() {
           <SectionBadge
             label="KEY INDUSTRIES"
             backgroundColor="var(--color-surface-cream-alt)"
-            className="w-fit" />
+            className="w-fit"
+          />
 
           <h2 className="font-display text-h1 leading-tight lg:text-h0">
             Strategic
@@ -77,20 +78,23 @@ export default function StrategicSectors() {
                   <span
                     className="pointer-events-none absolute inset-y-0 right-0 hidden w-px lg:block"
                     style={dashedLineV}
-                    aria-hidden />
+                    aria-hidden
+                  />
                 )}
                 {/* Horizontal divider: mobile — after all but last; desktop — after row 0 only */}
                 {index < sectors.length - 1 && (
                   <span
                     className="pointer-events-none absolute inset-x-0 bottom-0 h-px lg:hidden"
                     style={dashedLineH}
-                    aria-hidden />
+                    aria-hidden
+                  />
                 )}
                 {(index === 0 || index === 1) && (
                   <span
                     className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-px lg:block"
                     style={dashedLineH}
-                    aria-hidden />
+                    aria-hidden
+                  />
                 )}
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-mono text-sm leading-none tracking-wide">

@@ -21,7 +21,8 @@ export default function CareersLifeField() {
               <div className="flex w-full max-w-[494px] flex-col gap-(--space-gap-md)">
                 <SectionBadge
                   label="Our structure"
-                  backgroundColor="var(--color-surface-cream)" />
+                  backgroundColor="var(--color-surface-cream)"
+                />
                 <h2 className="font-display text-h1 font-light xl:text-h0">
                   Life in the Field
                 </h2>
@@ -47,7 +48,8 @@ export default function CareersLifeField() {
                         alt=""
                         fill
                         className="object-cover"
-                        sizes="100vw" />
+                        sizes="100vw"
+                      />
                     </div>
                     <p className="font-display text-b1 text-(--color-muted)">
                       {row.titleMuted}
@@ -72,7 +74,8 @@ export default function CareersLifeField() {
                       width={LIFE_FIELD_IMG_W}
                       height={LIFE_FIELD_IMG_H}
                       className="h-full w-full object-cover"
-                      sizes="296px" />
+                      sizes="296px"
+                    />
                   </div>
                   <div className="flex min-w-0 flex-col gap-4 md:max-w-[min(100%,670px)]">
                     <div className="text-(--color-muted)">

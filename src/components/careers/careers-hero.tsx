@@ -42,7 +42,8 @@ export default function CareersHero() {
               fill
               className="object-contain object-bottom"
               sizes="100vw"
-              priority />
+              priority
+            />
           </motion.div>
         </motion.div>
 
@@ -60,7 +61,8 @@ export default function CareersHero() {
             <CareersSplitButtonDark
               href="#openings"
               label="VIEW CURRENT OPENINGS"
-              aria-label="View current openings" />
+              aria-label="View current openings"
+            />
           </div>
         </ScrollReveal>
       </div>
@@ -81,7 +83,8 @@ export default function CareersHero() {
             <CareersSplitButtonDark
               href="#openings"
               label="VIEW CURRENT OPENINGS"
-              aria-label="View current openings" />
+              aria-label="View current openings"
+            />
           </div>
         </ScrollReveal>
 
@@ -107,7 +110,8 @@ export default function CareersHero() {
                 fill
                 className="object-contain object-right"
                 sizes="50vw"
-                priority />
+                priority
+              />
             </motion.div>
           </div>
         </motion.div>

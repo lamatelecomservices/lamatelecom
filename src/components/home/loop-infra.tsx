@@ -13,31 +13,19 @@ const features = [
   {
     label: "Zero Waste",
     icon: (
-      <Image
-        src="/infra/waste.svg"
-        alt="Zero Waste"
-        width={24}
-        height={24} />
+      <Image src="/infra/waste.svg" alt="Zero Waste" width={24} height={24} />
     ),
   },
   {
     label: "ISO-Certified",
     icon: (
-      <Image
-        src="/infra/iso.svg"
-        alt="ISO-Certified"
-        width={24}
-        height={24} />
+      <Image src="/infra/iso.svg" alt="ISO-Certified" width={24} height={24} />
     ),
   },
   {
     label: "R2v3 Processes",
     icon: (
-      <Image
-        src="/infra/r3v.svg"
-        alt="R2v3 Processes"
-        width={24}
-        height={24} />
+      <Image src="/infra/r3v.svg" alt="R2v3 Processes" width={24} height={24} />
     ),
   },
 ];
@@ -49,7 +37,8 @@ export default function LoopInfra() {
       <div className="layout-full-bleed relative min-h-[560px] overflow-hidden sm:min-h-[600px] lg:h-[min(88vh,840px)] lg:min-h-[680px] xl:h-[min(90vh,920px)] 2xl:h-[min(92vh,1020px)]">
         <VideoBackground
           videoSrc="/videos/second.mp4"
-          imageSrc="/loop-infra.png" />
+          imageSrc="/loop-infra.png"
+        />
 
         <div className="absolute inset-0 bg-black/40" aria-hidden />
 
