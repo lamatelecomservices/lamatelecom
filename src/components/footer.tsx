@@ -6,6 +6,11 @@ import { useState } from "react";
 
 import Button from "@/components/button";
 import { ScrollReveal } from "@/components/motion";
+import {
+  SOCIAL_FACEBOOK_HREF,
+  SOCIAL_LINKEDIN_HREF,
+  SOCIAL_X_HREF,
+} from "@/lib/social-links";
 
 const SERVICES = [
   {
@@ -41,7 +46,7 @@ const INDUSTRIES = [
   },
   { label: "Enterprise Networks", href: "/industries#enterprise-networks" },
   { label: "Data Centers", href: "/industries#data-centers" },
-  { label: "Government", href: "/industries#government-organisations" },
+  { label: "Government", href: "/industries#government-organizations" },
 ];
 
 const ABOUT = [
@@ -261,20 +266,6 @@ export default function Footer() {
                     Lama Freight
                   </Link>
                 </div>
-
-                <div className="flex flex-col gap-1.5">
-                  <span className="font-mono text-o1 uppercase text-(--color-footer-muted)">
-                    Logistics Partner
-                  </span>
-                  <Link
-                    href="https://www.lamalogistics.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-fit text-b1 text-white underline underline-offset-4 transition-colors hover:text-(--color-footer-accent)"
-                  >
-                    Lama Logistics
-                  </Link>
-                </div>
               </div>
             </div>
 
@@ -298,7 +289,7 @@ export default function Footer() {
 
                 <div className="mt-2 flex gap-3">
                   <Link
-                    href="https://www.linkedin.com"
+                    href={SOCIAL_LINKEDIN_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -313,7 +304,7 @@ export default function Footer() {
                     />
                   </Link>
                   <Link
-                    href="https://www.facebook.com"
+                    href={SOCIAL_FACEBOOK_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -328,7 +319,7 @@ export default function Footer() {
                     />
                   </Link>
                   <Link
-                    href="https://x.com"
+                    href={SOCIAL_X_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="X"

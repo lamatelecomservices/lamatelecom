@@ -73,7 +73,7 @@ export default function LoopInfra() {
                 delay={0.08}
               >
                 <p className="text-b1">
-                  We help organisations recover value from IT and telecom assets
+                  We help organizations recover value from IT and telecom assets
                   through secure decommissioning, asset recovery, and
                   responsible recycling. Our services are built for speed,
                   compliance, and sustainability—supporting smarter
@@ -98,7 +98,7 @@ export default function LoopInfra() {
       <div className="layout-container mt-8 flex flex-col gap-6 lg:hidden">
         <ScrollReveal delay={0.08}>
           <p className="text-b1 text-(--color-fg)">
-            We help organisations recover value from IT and telecom assets
+            We help organizations recover value from IT and telecom assets
             through secure decommissioning, asset recovery, and responsible
             recycling. Our services are built for speed, compliance, and
             sustainability—supporting smarter infrastructure decisions at every

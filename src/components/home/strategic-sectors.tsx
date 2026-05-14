@@ -17,13 +17,13 @@ const sectors = [
   },
   {
     id: "02",
-    title: "Data Centres & Hyperscalers",
+    title: "Data Centers & Hyperscalers",
     href: "/industries#data-centers",
   },
   {
     id: "03",
     title: "Govt Comms",
-    href: "/industries#government-organisations",
+    href: "/industries#government-organizations",
   },
   {
     id: "04",

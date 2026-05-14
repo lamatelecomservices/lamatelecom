@@ -63,8 +63,8 @@ export const industriesSections: IndustrySectionConfig[] = [
     ],
   },
   {
-    id: "government-organisations",
-    title: "Government Organisations",
+    id: "government-organizations",
+    title: "Government Organizations",
     layout: "split",
     imagePosition: "right",
     tone: "white",

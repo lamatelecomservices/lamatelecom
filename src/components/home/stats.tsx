@@ -35,13 +35,13 @@ export default function Stats() {
               <StatCard value="99%" content="On-Time Project Delivery" />
             </StaggerItem>
             <StaggerItem>
-              <StatCard value="500+" content="Tonnes of IT & Network Assets" />
+              <StatCard value="15,000+" content="Tons of IT & Network Assets" />
             </StaggerItem>
             <StaggerItem>
-              <StatCard value="150+" content="Infrastructure Projects" />
+              <StatCard value="400+" content="Infrastructure Projects" />
             </StaggerItem>
             <StaggerItem>
-              <StatCard value="08" content="Years in Business" />
+              <StatCard value="15+" content="Years in Business" />
             </StaggerItem>
           </StaggerContainer>
         </div>

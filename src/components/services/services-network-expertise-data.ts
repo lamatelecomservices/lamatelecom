@@ -10,7 +10,7 @@ export type NetworkExpertiseItem = {
 export const networkExpertiseItems: NetworkExpertiseItem[] = [
   {
     id: "01",
-    title: "Data Centre Decommissioning",
+    title: "Data Center Decommissioning",
     watermark: "02",
     description:
       "We manage full-scope decommissioning, including network, computer, and storage infrastructure. Assets are reviewed for redeployment, resale, or recycling to support cost recovery.",

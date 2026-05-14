@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ContactForm from "@/components/contact/contact-form";
+import {
+  SOCIAL_FACEBOOK_HREF,
+  SOCIAL_LINKEDIN_HREF,
+  SOCIAL_X_HREF,
+} from "@/lib/social-links";
 
 const EMAIL = "tenzin.gonpo@lamalogistics.com";
 const PHONE_DISPLAY = "8313469383";
@@ -90,16 +95,16 @@ export default function ContactPage() {
 
             <div className="flex gap-3 pt-2">
               <Box
-                href="https://www.linkedin.com"
+                href={SOCIAL_LINKEDIN_HREF}
                 alt="LinkedIn"
                 src="/contact/linkedin.svg"
               />
               <Box
-                href="https://www.facebook.com"
+                href={SOCIAL_FACEBOOK_HREF}
                 alt="Facebook"
                 src="/contact/facebook.svg"
               />
-              <Box href="https://x.com" alt="X" src="/contact/x.svg" />
+              <Box href={SOCIAL_X_HREF} alt="X" src="/contact/x.svg" />
             </div>
           </div>
 

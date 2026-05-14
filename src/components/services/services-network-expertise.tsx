@@ -24,6 +24,8 @@ type ExpertiseRowProps = {
   reduceMotion: boolean | null;
 };
 
+const expertiseImageSizes = "(max-width: 767px) 100vw, 380px";
+
 function ExpertiseRow({ item, reduceMotion }: ExpertiseRowProps) {
   const rowArticle = [" py-12 md:py-16"].filter(Boolean).join(" ");
 
@@ -41,8 +43,8 @@ function ExpertiseRow({ item, reduceMotion }: ExpertiseRowProps) {
             alt={item.title}
             fill
             className="object-cover"
-            sizes="100vw"
-            unoptimized
+            sizes={expertiseImageSizes}
+            quality={88}
           />
         </motion.div>
         <div className="flex items-start gap-4">
@@ -68,7 +70,8 @@ function ExpertiseRow({ item, reduceMotion }: ExpertiseRowProps) {
             alt={item.title}
             fill
             className="object-cover"
-            sizes="220px"
+            sizes={expertiseImageSizes}
+            quality={88}
           />
         </motion.div>
         <div className="flex items-start gap-[90px]">
