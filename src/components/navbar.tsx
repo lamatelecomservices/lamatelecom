@@ -100,11 +100,11 @@ export default function Navbar() {
               aria-label="Go to home"
             >
               <Image
-                src="/LOGO.svg"
+                src="/LOGO-1.png"
                 alt=""
-                width={65}
-                height={35}
-                className="h-8.75 w-auto rounded-none! md:h-auto md:w-auto"
+                width={180}
+                height={70}
+                className="h-8 w-auto rounded-none! md:h-auto md:w-auto"
               />
               {/* <div className="hidden flex-col leading-tight md:flex">
                 <span className="font-display text-[22px] font-medium">
