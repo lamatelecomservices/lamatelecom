@@ -29,10 +29,10 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
   {
     id: "tenzin-tekan-lama",
     indexLabel: "03",
-    name: "Tenzin Tekan",
+    name: "Tenzing Tekan",
     title: "Chief Financial Officer (CFO)",
     imageSrc: "/about/leadership/3.jpg",
-    bio: "Tenzin is a seasoned finance executive with global experience across investment banking, management consulting, and impact-driven enterprises. As Chief Financial Officer, he oversees financial strategy, growth planning, and operational performance.\n\nPrior to Lama Telecom, Tenzin held roles at Bain & Company, IFC (World Bank Group), and Goldman Sachs. He holds an MBA from Harvard Business School and a Bachelor's degree in Finance and International Business from Georgetown University.",
+    bio: "Tenzing is a seasoned finance executive with global experience across investment banking, management consulting, and impact-driven enterprises. As Chief Financial Officer, he oversees financial strategy, growth planning, and operational performance.\n\nPrior to Lama Telecom, Tenzing held roles at Bain & Company, IFC (World Bank Group), and Goldman Sachs. He holds an MBA from Harvard Business School and a Bachelor's degree in Finance and International Business from Georgetown University.",
   },
   {
     id: "tenzin-gonpo",
