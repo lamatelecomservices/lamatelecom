@@ -8,11 +8,11 @@ import {
   SOCIAL_X_HREF,
 } from "@/lib/social-links";
 
-const EMAIL = "tenzin.gonpo@lamalogistics.com";
-const PHONE_DISPLAY = "8313469383";
-const PHONE_HREF = "tel:+18313469383";
+const EMAIL = "info@lamatelecomservices.com";
+const PHONE_DISPLAY = "831-346-9383";
+const PHONE_HREF = "tel:+1 831-346-9383";
 
-const ADDRESS_LINE_1 = "2161 Shattuck Ave, Ste 232";
+const ADDRESS_LINE_1 = "2161 Shattuck Ave, Ste 233";
 const ADDRESS_LINE_2 = "Berkeley, CA 94704";
 const MAPS_HREF = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `${ADDRESS_LINE_1}, ${ADDRESS_LINE_2}`,
