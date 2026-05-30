@@ -47,7 +47,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
     id: "tenzin-gonpo",
     indexLabel: "04",
     name: "Tenzin Gonpo",
-    title: "Chief Technology Officer (CTO) & Director of Decom Operations",
+    title: "CTO & Director Decom Operations",
     imageSrc: "/about/leadership/7.jpg",
     bio: [
       "Tenzin Gonpo is a technology and telecom leader with over 15 years of experience in network infrastructure, ISP operations, and data center decommissioning. He has led large-scale broadband, enterprise network, and infrastructure modernization projects across multiple regions.",
@@ -69,7 +69,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
     id: "eric-savoia",
     indexLabel: "06",
     name: "Eric Savoia",
-    title: "Lead Asset Recovery Operations (ARO Lead)",
+    title: " Asset Recovery Operations Lead (ARO)",
     imageSrc: "/about/leadership/5.jpg",
     bio: [
       "Eric leads our restoration and asset recovery teams with a blend of strategic rigor and creative problem-solving. From initial site audits to final turnover, he manages complex shutdowns and environmental compliance with a sharp focus on precision and risk mitigation. By prioritizing clear documentation and stakeholder communication, Eric helps operators maximize capital return and accelerate lease exits—delivering structured, high-stakes outcomes where accountability matters most.",
