@@ -58,7 +58,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
     id: "yanchen-dolker",
     indexLabel: "05",
     name: "Yangchen Dolkar",
-    title: "Chief Operating Officer (COO)",
+    title: "Fractional COO (COO)",
     imageSrc: "/about/leadership/4.jpg",
     bio: [
       "Yangchen Dolkar is a seasoned Business Operations leader and Fractional Chief Operating Officer with 15+ years of experience building and scaling enterprise-ready systems across data centers, technology, logistics, AEC, and other service-based industries. At Lama Telecom Services, she supports operational strategy, process optimization, and growth initiatives, helping transform business operations into structured, scalable, and high-performing systems and solving complex operational problems.",
@@ -76,13 +76,13 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
     ],
   },
   {
-    id: "forest-roberts",
+    id: "forrest-roberts",
     indexLabel: "07",
-    name: "Forest Roberts",
+    name: "Forrest Roberts",
     title: "Deployment Lead",
     imageSrc: "/about/leadership/6.jpg",
     bio: [
-      "Forest Roberts leads deployment programs from planning through field execution, coordinating site logistics, resource allocation, and stakeholder alignment for complex infrastructure transitions.",
+      "Forrest Roberts leads deployment programs from planning through field execution, coordinating site logistics, resource allocation, and stakeholder alignment for complex infrastructure transitions.",
       "At Lama Telecom Services, he ensures rollouts stay on schedule and on spec—bridging operations, engineering, and client teams so large-scale decommissioning and recovery projects land safely and predictably.",
     ],
   },
