@@ -149,17 +149,11 @@ export default function Footer() {
     };
 
     try {
-      const response = await fetch(
-        "https://lama-logistics-88b311025848.herokuapp.com/staff/api/sendInquiry",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        },
-      );
-
+      const response = await fetch("/api/staff/api/sendInquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
       const result = await response.json();
 
       if (!response.ok) {
