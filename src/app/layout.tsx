@@ -6,10 +6,10 @@ import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
-    template: "Lama Logistics | %s",
-    default: "Lama Logistics",
+    template: "Lama Telecom | %s",
+    default: "Lama Telecom",
   },
-  description: "A logistics company that puts people first",
+  description: "A telecom company that puts people first",
   icons: {
     icon: [
       {

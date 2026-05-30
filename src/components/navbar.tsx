@@ -106,14 +106,6 @@ export default function Navbar() {
                 height={70}
                 className="h-8 w-auto rounded-none! md:h-auto md:w-auto"
               />
-              {/* <div className="hidden flex-col leading-tight md:flex">
-                <span className="font-display text-[22px] font-medium">
-                  Lama
-                </span>
-                <span className="font-display text-[20px] font-medium">
-                  Telecom
-                </span>-
-              </div> */}
             </button>
 
             <div className="flex shrink-0 items-center gap-2 md:gap-(--space-gap-md)">

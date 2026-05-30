@@ -25,19 +25,31 @@ function SidebarMetaRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-function ApplyNowLink() {
+export function ApplyNowLink({ color }: { color: "white" | "black" }) {
+  const bgColor = color === "white" ? "bg-white" : "bg-black";
+  const textColor = color === "white" ? "text-black" : "text-white";
   return (
     <a
       href="https://lama-logistics-88b311025848.herokuapp.com/apply"
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex h-[48px] w-auto items-center gap-1 font-mono text-o1 leading-none tracking-wide text-white transition-all duration-400 md:h-[54px] md:gap-(--space-gap-sm) md:text-b2"
+      className={`group inline-flex h-[48px] w-auto items-center gap-1 font-mono text-o1 leading-none tracking-wide ${textColor} transition-all duration-400 md:h-[54px] md:gap-(--space-gap-sm) md:text-b2`}
     >
-      <span className="flex h-[48px] min-h-[48px] shrink-0 items-center whitespace-nowrap rounded-sm bg-black px-4 transition-colors group-hover:bg-(--color-primary) md:h-[54px] md:min-h-[54px] md:px-(--space-btn-x)">
+      <span
+        className={`flex h-[48px] min-h-[48px] shrink-0 items-center whitespace-nowrap rounded-sm ${bgColor} px-4 transition-colors group-hover:bg-(--color-primary) md:h-[54px] md:min-h-[54px] md:px-(--space-btn-x)`}
+      >
         APPLY NOW
       </span>
-      <span className="flex h-[48px] w-[48px] min-h-[48px] min-w-[48px] shrink-0 items-center justify-center rounded-sm bg-black transition-all duration-400 group-hover:translate-x-1 group-hover:bg-(--color-primary) md:h-[54px] md:w-[54px] md:min-h-[54px] md:min-w-[54px]">
-        <Image src="/arrow.svg" alt="" width={20} height={20} />
+      <span
+        className={`flex h-[48px] w-[48px] min-h-[48px] min-w-[48px] shrink-0 items-center justify-center rounded-sm ${bgColor} transition-all duration-400 group-hover:translate-x-1 group-hover:bg-(--color-primary) md:h-[54px] md:w-[54px] md:min-h-[54px] md:min-w-[54px]`}
+      >
+        <Image
+          src="/arrow.svg"
+          alt=""
+          width={20}
+          height={20}
+          className={`${textColor} ${bgColor === "bg-white" ? "invert" : ""}`}
+        />
       </span>
     </a>
   );
@@ -135,11 +147,11 @@ export default function CareersJobDetailView({
       ) : null}
 
       <div className="hidden pt-2 lg:block">
-        <ApplyNowLink />
+        <ApplyNowLink color="black" />
       </div>
 
       <div className="pt-2 lg:hidden">
-        <ApplyNowLink />
+        <ApplyNowLink color="black" />
       </div>
     </>
   );

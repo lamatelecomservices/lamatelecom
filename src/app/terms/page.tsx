@@ -5,7 +5,7 @@ import { TERMS_OF_SERVICE } from "@/data/terms-of-service";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Lama Logistics — platform use, carriers, shippers, and payments.",
+    "Terms of Service for LAMA TELECOM — platform use, carriers, shippers, and payments.",
 };
 
 export default function TermsPage() {

@@ -5,7 +5,7 @@ import { PRIVACY_POLICY } from "@/data/privacy-policy";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "LAMA Logistics privacy practices — how we collect, use, share, and protect your information.",
+    "LAMA TELECOM privacy practices — how we collect, use, share, and protect your information.",
 };
 
 export default function PrivacyPage() {

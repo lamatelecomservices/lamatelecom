@@ -8,14 +8,9 @@ import SectionBadge from "@/components/section-badge";
 
 const brands = [
   {
-    name: "Verizon",
-    src: "/brands/verizon.svg",
-    bg: "bg-(--color-brand-tile-1)",
-  },
-  {
-    name: "AT&T",
-    src: "/brands/at&t.svg",
-    bg: "bg-(--color-brand-tile-2)",
+    name: "ATNI",
+    src: "/brands/atni.svg",
+    bg: "bg-[#072457]",
   },
   {
     name: "Google Cloud",
@@ -23,14 +18,20 @@ const brands = [
     bg: "bg-(--color-brand-tile-3)",
   },
   {
+    name: "Lumen",
+    src: "/brands/lumen.svg",
+    bg: "bg-(--color-brand-tile-5)",
+  },
+
+  {
     name: "AWS",
     src: "/brands/aws.svg",
     bg: "bg-(--color-brand-tile-4)",
   },
   {
-    name: "Lumen",
-    src: "/brands/lumen.svg",
-    bg: "bg-(--color-brand-tile-5)",
+    name: "Full Circle",
+    src: "/brands/full_circle.svg",
+    bg: "bg-[#00007D]",
   },
 ];
 
