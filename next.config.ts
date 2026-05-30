@@ -14,6 +14,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api/staff/:path*",
+        destination:
+          "https://lama-logistics-88b311025848.herokuapp.com/staff/:path*",
+      },
+    ];
+  },
   async headers() {
     return [
       {
