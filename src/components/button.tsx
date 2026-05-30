@@ -11,6 +11,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   /** When set, renders as a link with the same visual treatment as the button. */
   href?: string;
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -20,10 +21,12 @@ export default function Button({
   isArrow = true,
   type = "button",
   href,
+  disabled = false,
 }: ButtonProps) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
+    if (disabled) return;
     setClicked(true);
     setTimeout(() => setClicked(false), 180);
   };
@@ -71,7 +74,12 @@ export default function Button({
       );
     }
     return (
-      <button onClick={handleClick} className={rootClass} type={type}>
+      <button
+        onClick={handleClick}
+        className={rootClass}
+        type={type}
+        disabled={disabled}
+      >
         {arrow}
       </button>
     );
@@ -86,7 +94,12 @@ export default function Button({
     );
   }
   return (
-    <button onClick={handleClick} className={rootClass} type={type}>
+    <button
+      onClick={handleClick}
+      className={rootClass}
+      type={type}
+      disabled={disabled}
+    >
       {labelOnly}
     </button>
   );

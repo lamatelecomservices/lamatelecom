@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Button from "@/components/button";
 import { ScrollReveal } from "@/components/motion";
@@ -117,6 +117,69 @@ function FooterLineInput({
 
 export default function Footer() {
   const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    if (submitStatus === "success") {
+      const timer = setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: formData.get("footer-full-name"),
+      company: formData.get("footer-company"),
+      email: formData.get("footer-email"),
+      tellUsMore: formData.get("footer-message") || "",
+    };
+
+    try {
+      const response = await fetch(
+        "https://lama-logistics-88b311025848.herokuapp.com/staff/api/sendInquiry",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        },
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Something went wrong");
+      }
+
+      setSubmitStatus("success");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      setSubmitStatus("error");
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : "Failed to send inquiry. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer
@@ -156,7 +219,7 @@ export default function Footer() {
           <ScrollReveal className="flex flex-col" delay={0.08}>
             <form
               className="relative z-10 flex flex-col gap-6"
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
             >
               <FooterLineInput
                 id="footer-full-name"
@@ -165,24 +228,16 @@ export default function Footer() {
               />
               <FooterLineInput
                 id="footer-company"
-                placeholderText="Company’s Name"
+                placeholderText="Company's Name"
                 required
               />
 
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6">
-                <FooterLineInput
-                  id="footer-email"
-                  placeholderText="Work Email Address"
-                  type="email"
-                  required
-                />
-                <FooterLineInput
-                  id="footer-phone"
-                  placeholderText="Work Phone"
-                  type="tel"
-                  required
-                />
-              </div>
+              <FooterLineInput
+                id="footer-email"
+                placeholderText="Work Email Address"
+                type="email"
+                required
+              />
 
               <textarea
                 id="footer-message"
@@ -204,13 +259,28 @@ export default function Footer() {
                 />
                 <span className="text-b2 leading-relaxed text-white">
                   I agree that Lama Telecom may contact me at the email address
-                  or phone number above.
+                  above.
                 </span>
               </label>
 
+              {submitStatus === "success" && (
+                <p className="text-b2 text-green-400">
+                  Inquiry sent successfully!
+                </p>
+              )}
+
+              {submitStatus === "error" && (
+                <p className="text-b2 text-red-400">{errorMessage}</p>
+              )}
+
               <div className="pt-2">
-                <Button variant="accent" isArrow type="submit">
-                  SEND
+                <Button
+                  variant="accent"
+                  isArrow
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "SENDING..." : "SEND"}
                 </Button>
               </div>
 

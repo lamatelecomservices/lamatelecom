@@ -184,10 +184,7 @@ function LeadershipRow({
       ? "hover:bg-white/6"
       : "hover:bg-(--color-surface-about-stat-card)/60";
 
-  const bioParagraphs = member.bio
-    .split(/\n\n+/)
-    .map((p) => p.trim())
-    .filter(Boolean);
+  const bioParagraphs = member.bio;
 
   return (
     <li
@@ -280,7 +277,7 @@ function LeadershipRow({
                   />
                 </div>
               ) : null}
-              <div className="col-span-2 flex max-w-2xl flex-col gap-6 sm:col-span-1 sm:col-start-2">
+              <div className="col-span-2 flex flex-col gap-6 sm:col-span-1 sm:col-start-2">
                 {bioParagraphs.map((paragraph, i) => (
                   <p
                     key={`${member.id}-bio-${i}`}

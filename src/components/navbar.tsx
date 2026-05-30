@@ -112,7 +112,7 @@ export default function Navbar() {
                 </span>
                 <span className="font-display text-[20px] font-medium">
                   Telecom
-                </span>
+                </span>-
               </div> */}
             </button>
 

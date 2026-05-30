@@ -29,17 +29,7 @@ export default function AboutMissionStats() {
 
         <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-(--space-gap-lg)">
           {/* Image: natural aspect ratio, no cropping */}
-          <div className="w-full min-w-0 max-lg:mx-auto max-lg:max-w-[min(100%,920px)]">
-            <Image
-              src="/about/img/hero.svg"
-              alt="Lama Telecom Services team"
-              width={1440}
-              height={668}
-              className="h-auto w-full object-contain grayscale contrast-105"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              unoptimized
-            />
-          </div>
+          <div className="w-full min-w-0 max-lg:mx-auto max-lg:max-w-[min(100%,920px)]"></div>
 
           {/* Text: aligns to top, flows naturally */}
           <div className="flex w-full min-w-0 flex-col gap-6">
@@ -66,17 +56,6 @@ export default function AboutMissionStats() {
               <div className="flex flex-col gap-3 px-6 pt-8 pb-2">
                 <p className="font-display text-h1 lg:text-h0">{item.value}</p>
                 <p className="font-body text-b1">{item.label}</p>
-              </div>
-
-              <div className="relative mt-auto h-[min(150px,20vw)] min-h-[120px] w-full sm:h-[150px] lg:h-[180px]">
-                <Image
-                  src={item.src}
-                  alt=""
-                  fill
-                  className="object-contain object-bottom-right grayscale contrast-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  unoptimized
-                />
               </div>
             </li>
           ))}

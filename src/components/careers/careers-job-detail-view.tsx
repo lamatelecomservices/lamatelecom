@@ -25,18 +25,12 @@ function SidebarMetaRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-function ApplyNowSplitButton({
-  onClick,
-  ariaLabel,
-}: {
-  onClick: () => void;
-  ariaLabel: string;
-}) {
+function ApplyNowLink() {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-label={ariaLabel}
+    <a
+      href="https://lama-logistics-88b311025848.herokuapp.com/apply"
+      target="_blank"
+      rel="noopener noreferrer"
       className="group inline-flex h-[48px] w-auto items-center gap-1 font-mono text-o1 leading-none tracking-wide text-white transition-all duration-400 md:h-[54px] md:gap-(--space-gap-sm) md:text-b2"
     >
       <span className="flex h-[48px] min-h-[48px] shrink-0 items-center whitespace-nowrap rounded-sm bg-black px-4 transition-colors group-hover:bg-(--color-primary) md:h-[54px] md:min-h-[54px] md:px-(--space-btn-x)">
@@ -45,7 +39,7 @@ function ApplyNowSplitButton({
       <span className="flex h-[48px] w-[48px] min-h-[48px] min-w-[48px] shrink-0 items-center justify-center rounded-sm bg-black transition-all duration-400 group-hover:translate-x-1 group-hover:bg-(--color-primary) md:h-[54px] md:w-[54px] md:min-h-[54px] md:min-w-[54px]">
         <Image src="/arrow.svg" alt="" width={20} height={20} />
       </span>
-    </button>
+    </a>
   );
 }
 
@@ -54,19 +48,6 @@ export default function CareersJobDetailView({
   detail,
 }: CareersJobDetailViewProps) {
   const applyHref = `mailto:${CAREERS_HR_EMAIL}?subject=${encodeURIComponent(`Application: ${job.title}`)}`;
-  const [tab, setTab] = useState<"overview" | "application">("overview");
-
-  const goToApplication = () => {
-    setTab("application");
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(max-width: 1023px)").matches
-    ) {
-      document
-        .getElementById("job-application")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   if (!detail) {
     return (
@@ -154,17 +135,11 @@ export default function CareersJobDetailView({
       ) : null}
 
       <div className="hidden pt-2 lg:block">
-        <ApplyNowSplitButton
-          onClick={goToApplication}
-          ariaLabel={`Open application for ${job.title}`}
-        />
+        <ApplyNowLink />
       </div>
 
       <div className="pt-2 lg:hidden">
-        <ApplyNowSplitButton
-          onClick={goToApplication}
-          ariaLabel={`Scroll to application for ${job.title}`}
-        />
+        <ApplyNowLink />
       </div>
     </>
   );
@@ -219,78 +194,16 @@ export default function CareersJobDetailView({
           ) : null}
         </header>
 
-        {/* Mobile: overview + extra sections + form (no tabs) */}
+        {/* Mobile: overview + extra sections (no tabs) */}
         <div className="flex flex-col gap-12 lg:hidden">
           <div className="flex flex-col gap-10">{overviewBody}</div>
-          <CareersJobApplicationForm
-            id="job-application"
-            jobTitle={job.title}
-          />
         </div>
 
-        {/* Desktop: sidebar + tabs */}
+        {/* Desktop: sidebar + overview */}
         <div className="hidden  lg:grid lg:grid-cols-[minmax(220px,280px)_minmax(0,1fr)] lg:items-start lg:gap-x-20 xl:gap-x-28 2xl:gap-x-36">
           {sidebar}
           <div className="flex min-w-0 flex-col gap-8 max-w-[800px]">
-            <div
-              role="tablist"
-              aria-label="Job sections"
-              className="flex gap-10 border-b border-(--color-border) font-mono text-o1 uppercase tracking-wide md:text-b2"
-            >
-              <button
-                type="button"
-                role="tab"
-                aria-selected={tab === "overview"}
-                id="tab-overview"
-                aria-controls="panel-overview"
-                className={
-                  tab === "overview"
-                    ? "-mb-px border-b-2 border-(--color-primary) pb-3 text-(--color-primary)"
-                    : "pb-3 text-(--color-careers-opening-meta) transition-colors hover:text-(--color-fg)"
-                }
-                onClick={() => setTab("overview")}
-              >
-                Overview
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={tab === "application"}
-                id="tab-application"
-                aria-controls="panel-application"
-                className={
-                  tab === "application"
-                    ? "-mb-px border-b-2 border-(--color-primary) pb-3 text-(--color-primary)"
-                    : "pb-3 text-(--color-careers-opening-meta) transition-colors hover:text-(--color-fg)"
-                }
-                onClick={() => setTab("application")}
-              >
-                Application
-              </button>
-            </div>
-
-            <div
-              id="panel-overview"
-              role="tabpanel"
-              aria-labelledby="tab-overview"
-              hidden={tab !== "overview"}
-              className="flex flex-col gap-10"
-            >
-              {overviewBody}
-            </div>
-
-            <div
-              id="panel-application"
-              role="tabpanel"
-              aria-labelledby="tab-application"
-              hidden={tab !== "application"}
-              className="flex flex-col gap-10"
-            >
-              <CareersJobApplicationForm
-                id="job-application-desktop"
-                jobTitle={job.title}
-              />
-            </div>
+            <div className="flex flex-col gap-10">{overviewBody}</div>
           </div>
         </div>
       </div>
