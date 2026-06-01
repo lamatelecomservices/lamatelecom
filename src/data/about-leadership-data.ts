@@ -58,7 +58,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
     id: "yanchen-dolker",
     indexLabel: "05",
     name: "Yangchen Dolkar",
-    title: "Fractional COO (COO)",
+    title: "Fractional (COO)",
     imageSrc: "/about/leadership/4.jpg",
     bio: [
       "Yangchen Dolkar is a seasoned Business Operations leader and Fractional Chief Operating Officer with 15+ years of experience building and scaling enterprise-ready systems across data centers, technology, logistics, AEC, and other service-based industries. At Lama Telecom Services, she supports operational strategy, process optimization, and growth initiatives, helping transform business operations into structured, scalable, and high-performing systems and solving complex operational problems.",
