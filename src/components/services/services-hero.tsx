@@ -62,7 +62,9 @@ export default function ServicesHero() {
             environmental compliance.
           </p>
           <div className="flex items-center gap-3 pt-2">
-            <Button variant="secondary">LET&apos;S TALK</Button>
+            <Button variant="secondary" href="/contact">
+              LET&apos;S TALK
+            </Button>
           </div>
         </ScrollReveal>
       </div>
@@ -85,7 +87,9 @@ export default function ServicesHero() {
             environmental compliance.
           </p>
           <div className="flex items-center gap-3 pt-4">
-            <Button variant="secondary">LET&apos;S TALK</Button>
+            <Button variant="secondary" href="/contact">
+              LET&apos;S TALK
+            </Button>
           </div>
         </ScrollReveal>
 
