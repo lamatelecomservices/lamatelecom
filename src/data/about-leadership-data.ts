@@ -24,7 +24,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
     id: "timothy-swords",
     indexLabel: "02",
     name: "Timothy Swords",
-    title: "Independent Consultant",
+    title: "Independent Advisor to the Board",
     imageSrc: "/about/leadership/2.jpg",
     bio: [
       "As an executive coach and management consultant, Timothy helps C-Suite and senior leaders cultivate self-awareness, emotional resilience, and authenticity—enabling them to lead with clarity, empathy, and purpose in all areas of life. Through a bespoke approach integrating mindfulness meditation and leadership development, he empowers executives to align their leadership actions with their core values. This empowers them to navigate challenges with greater confidence and impact.",
