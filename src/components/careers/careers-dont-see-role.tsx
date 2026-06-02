@@ -18,9 +18,10 @@ export default function CareersDontSeeRole() {
           </p>
         </div>
         <CareersSplitButtonCream
-          href={`/about/apply`}
+          href="https://lama-logistics-88b311025848.herokuapp.com/apply"
           label="WRITE TO US"
           aria-label="Get in touch about careers"
+          target="_blank"
         />
       </div>
     </section>

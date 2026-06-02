@@ -66,7 +66,9 @@ export default function IndustriesHero() {
           </h1>
           <p className="text-b1 text-(--color-text-body)">{description}</p>
           <div className="pt-2">
-            <Button variant="secondary">LET&apos;S TALK</Button>
+            <Button variant="secondary" href="/contact">
+              LET&apos;S TALK
+            </Button>
           </div>
         </ScrollReveal>
       </div>
@@ -91,7 +93,9 @@ export default function IndustriesHero() {
             {description}
           </p>
           <div className="pt-4">
-            <Button variant="secondary">LET&apos;S TALK</Button>
+            <Button variant="secondary" href="/contact">
+              LET&apos;S TALK
+            </Button>
           </div>
         </ScrollReveal>
 
