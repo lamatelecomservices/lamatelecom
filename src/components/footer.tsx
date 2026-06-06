@@ -322,7 +322,7 @@ export default function Footer() {
                     Freight Partner
                   </span>
                   <Link
-                    href="https://www.lamafreight.com"
+                    href="https://www.lamatelecomservices.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-fit text-b1 text-white underline underline-offset-4 transition-colors hover:text-(--color-footer-accent)"
