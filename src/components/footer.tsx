@@ -316,6 +316,22 @@ export default function Footer() {
                 Berkeley, CA 94704
               </p>
 
+               <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-1.5">
+                  <span className="font-mono text-o1 uppercase text-(--color-footer-muted)">
+                    Freight Partner
+                  </span>
+                  <Link
+                    href="https://lamatelecomservices.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-fit text-b1 text-white underline underline-offset-4 transition-colors hover:text-(--color-footer-accent)"
+                  >
+                    Lama Freight
+                  </Link>
+                </div>
+              </div>
+            </div>
 
             <div className="grid min-w-0 grid-cols-1 gap-10 sm:grid-cols-[minmax(220px,1.35fr)_minmax(150px,1fr)_minmax(120px,0.9fr)] sm:items-start sm:gap-x-8 lg:gap-x-10">
               <nav
