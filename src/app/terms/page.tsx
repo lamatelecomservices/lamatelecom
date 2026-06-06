@@ -30,9 +30,9 @@ export default function TermsPage() {
           . For questions, contact{" "}
           <a
             className="text-(--color-primary) underline-offset-2 hover:underline"
-            href="mailto:support@lamalogistics.com"
+            href="mailto:info@telecomservices.com"
           >
-            support@lamalogistics.com
+            info@telecomservices.com
           </a>
           .
         </p>
