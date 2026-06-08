@@ -59,16 +59,17 @@ export default function BrandsSection() {
             {brands.slice(0, 3).map((brand) => (
               <StaggerItem key={brand.name}>
                 <div
-                  className={`flex h-[110px] w-full items-center justify-center ${brand.bg}`}
+                  className={`flex h-28 w-full items-center justify-center ${brand.bg}`}
                   style={{ borderRadius: "9.89px" }}
                 >
-                  <Image
-                    src={brand.src}
-                    alt={brand.name}
-                    width={80}
-                    height={32}
-                    className="object-contain"
-                  />
+                  <div className="relative h-14 w-4/5">
+                    <Image
+                      src={brand.src}
+                      alt={brand.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </StaggerItem>
             ))}
@@ -76,18 +77,19 @@ export default function BrandsSection() {
 
           <StaggerContainer className="flex justify-center gap-3">
             {brands.slice(3).map((brand) => (
-              <StaggerItem key={brand.name} className="w-[calc(33.333%-4px)]">
+              <StaggerItem key={brand.name} className="w-1/3">
                 <div
-                  className={`flex h-[110px] w-full items-center justify-center ${brand.bg}`}
+                  className={`flex h-28 w-full items-center justify-center ${brand.bg}`}
                   style={{ borderRadius: "9.89px" }}
                 >
-                  <Image
-                    src={brand.src}
-                    alt={brand.name}
-                    width={80}
-                    height={32}
-                    className="object-contain"
-                  />
+                  <div className="relative h-14 w-4/5">
+                    <Image
+                      src={brand.src}
+                      alt={brand.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </StaggerItem>
             ))}
@@ -101,13 +103,14 @@ export default function BrandsSection() {
               <div
                 className={`mx-auto flex aspect-square w-full max-w-[220px] items-center justify-center rounded-2xl xl:max-w-[240px] ${brand.bg}`}
               >
-                <Image
-                  src={brand.src}
-                  alt={brand.name}
-                  width={100}
-                  height={40}
-                  className="object-contain"
-                />
+                <div className="relative h-1/2 w-4/5">
+                  <Image
+                    src={brand.src}
+                    alt={brand.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </StaggerItem>
           ))}

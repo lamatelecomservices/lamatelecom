@@ -29,7 +29,16 @@ export default function AboutMissionStats() {
 
         <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start lg:gap-(--space-gap-lg)">
           {/* Image: natural aspect ratio, no cropping */}
-          <div className="w-full min-w-0 max-lg:mx-auto max-lg:max-w-[min(100%,920px)]"></div>
+          {/* till tablet i want it to be in center  */}
+          <div className="w-full min-w-0 mx-auto lg:mx-0 max-w-[min(100%,920px)] lg:max-w-none flex justify-center lg:block">
+            <Image
+              src="/about/mission-stats.svg"
+              alt=""
+              width={180}
+              height={180}
+              className="mt-10 block"
+            />
+          </div>
 
           {/* Text: aligns to top, flows naturally */}
           <div className="flex w-full min-w-0 flex-col gap-6">

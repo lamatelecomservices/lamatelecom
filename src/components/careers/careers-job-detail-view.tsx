@@ -1,12 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 import type { CareersJob } from "@/data/careers-data";
 import { CAREERS_HR_EMAIL } from "@/data/careers-data";
 import type { CareersJobDetailContent } from "@/data/careers-job-details";
-import CareersJobApplicationForm from "./careers-job-application-form";
 import CareersSplitButtonDark from "./careers-split-button-dark";
 
 type CareersJobDetailViewProps = {
