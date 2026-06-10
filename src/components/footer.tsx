@@ -319,7 +319,7 @@ export default function Footer() {
                <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-1.5">
                   <span className="font-mono text-o1 uppercase text-(--color-footer-muted)">
-                    Freight Partner
+                    <!-- Freight Partner
                   </span>
                   <Link
                     href="https://lamatelecomservices.com"
@@ -327,7 +327,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="w-fit text-b1 text-white underline underline-offset-4 transition-colors hover:text-(--color-footer-accent)"
                   >
-                    Lama Freight
+                    <!-- Lama Freight
                   </Link>
                 </div>
               </div>
