@@ -312,7 +312,7 @@ export default function Footer() {
               </button>
 
               <p className="text-b2 leading-relaxed text-(--color-footer-muted)">
-                2161 Shattuck Ave, Ste 232 <br />
+                2161 Shattuck Ave, Suite 233 <br />
                 Berkeley, CA 94704
               </p>
 
