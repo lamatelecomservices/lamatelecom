@@ -56,7 +56,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
   },
   {
     id: "eric-savoia",
-    indexLabel: "06",
+    indexLabel: "05",
     name: "Eric Savoia",
     title: " Asset Recovery Operations Lead (ARO)",
     imageSrc: "/about/leadership/5.jpg",
@@ -66,7 +66,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
   },
   {
     id: "forrest-roberts",
-    indexLabel: "07",
+    indexLabel: "06",
     name: "Forrest Roberts",
     title: "Deployment Lead",
     imageSrc: "/about/leadership/6.jpg",
@@ -78,7 +78,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
 
   {
     id: "sonam-wangmo",
-    indexLabel: "08",
+    indexLabel: "07",
     name: "Sonam Wangmo",
     title: "Executive Account Management & Client Relations",
     imageSrc: "/about/leadership/8.jpg",
