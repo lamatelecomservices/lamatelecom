@@ -54,7 +54,6 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
       "At Lama Telecom Services, Tenzin oversees technical strategy, decommissioning operations, and enterprise network solutions—driving secure execution, operational efficiency, and long-term business growth.",
     ],
   },
-
   {
     id: "eric-savoia",
     indexLabel: "06",
