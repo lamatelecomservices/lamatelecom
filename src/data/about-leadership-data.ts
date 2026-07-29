@@ -54,17 +54,7 @@ export const ABOUT_LEADERSHIP_TEAM: LeadershipMember[] = [
       "At Lama Telecom Services, Tenzin oversees technical strategy, decommissioning operations, and enterprise network solutions—driving secure execution, operational efficiency, and long-term business growth.",
     ],
   },
-  {
-    id: "yanchen-dolker",
-    indexLabel: "05",
-    name: "Yangchen Dolkar",
-    title: "Fractional (COO)",
-    imageSrc: "/about/leadership/4.jpg",
-    bio: [
-      "Yangchen Dolkar is a seasoned Business Operations leader and Fractional Chief Operating Officer with 15+ years of experience building and scaling enterprise-ready systems across data centers, technology, logistics, AEC, and other service-based industries. At Lama Telecom Services, she supports operational strategy, process optimization, and growth initiatives, helping transform business operations into structured, scalable, and high-performing systems and solving complex operational problems.",
-      "She was recognized as Top Ten Women in Engineering Business Leadership by Women Entrepreneurs Magazine (2021). Her academic background includes an Executive Education Program in Entrepreneurship from Stanford Graduate School of Business, an Executive MBA / Post Graduate Diploma in Business Management, a Bachelor’s degree, and studies in Law, Economics, Political Science, and Sociology.",
-    ],
-  },
+
   {
     id: "eric-savoia",
     indexLabel: "06",
